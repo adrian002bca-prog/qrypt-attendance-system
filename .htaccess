@@ -1,0 +1,18 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block direct access to sensitive files/folders.
+    RewriteRule ^conn/ - [F,L,NC]
+    RewriteRule ^backups/ - [F,L,NC]
+    RewriteRule ^archive/ - [F,L,NC]
+    RewriteRule ^exportdb/ - [F,L,NC]
+    RewriteRule ^.*\.(sql|ini|log|env)$ - [F,L,NC]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

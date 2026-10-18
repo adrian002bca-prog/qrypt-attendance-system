@@ -1,0 +1,12 @@
+# Development & Environment
+.env
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups & Temp files
+backups/*.sql
+backups/*.gz
+exportdb/*.sql
+conn/login_attempts.json

@@ -1,0 +1,5 @@
+<?php
+return [
+    'username' => 'Qrypt',
+    'password_hash' => '$2y$10$vN/gWwFHB.jxPLlm.t0i0uhu7qckyRFkqV6klFgNGfYQZQg7zcB1C',
+];
